@@ -1,10 +1,44 @@
-Home Assistant for Apple Platforms
+Home Assistant for Apple Platforms (Kiosk Mode Fork)
 =================
 
-[![TestFlight Beta invite](https://img.shields.io/badge/TestFlight-Beta-blue.svg)](https://www.home-assistant.io/ios/beta/)
-[![Download on the App Store](https://img.shields.io/itunes/v/1099568401.svg)](https://itunes.apple.com/app/home-assistant-open-source-home-automation/id1099568401)
-[![GitHub issues](https://img.shields.io/github/issues/home-assistant/iOS.svg?style=flat)](https://github.com/home-assistant/iOS/issues)
+> **This is a fork of [home-assistant/iOS](https://github.com/home-assistant/iOS) with Kiosk Mode functionality for wall-mounted tablets and dedicated displays.**
+
 [![License Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green.svg?style=flat)](https://github.com/home-assistant/iOS/blob/master/LICENSE)
+[![Feature Request](https://img.shields.io/badge/HA-Feature%20Request-41BDF5)](https://github.com/orgs/home-assistant/discussions/2403)
+
+## Kiosk Mode Features
+
+This fork adds a comprehensive **Kiosk Mode** designed for wall-mounted tablets and dedicated Home Assistant displays:
+
+### Display Control
+- **Screensaver** - Clock, photos, or custom URL with configurable timeout
+- **Prevent Auto-Lock** - Keep screen on without Guided Access
+- **Brightness control** via notifications
+
+### Security & Lockdown
+- **Navigation lockdown** - Disable swipe gestures and browser navigation
+- **Edge protection** - Block accidental touches near screen edges
+- **PIN/FaceID protection** - Secure exit from kiosk mode
+- **Secret exit gesture** - Configurable multi-tap in corner to access settings
+
+### Remote Control (via HA Notifications)
+- `command_screen_on` / `command_screen_off` - Wake or sleep display
+- `command_navigate` - Navigate to any dashboard
+- `command_refresh` - Reload current page
+- `command_show_camera` - Show camera popup (great for doorbells)
+- `command_tts` - Text-to-speech announcements
+- [Full command reference](Sources/App/Kiosk/README-KIOSK.md)
+
+### Automation Triggers
+- Wake on motion/presence detection from cameras
+- Wake on entity state changes
+- Dashboard switching based on triggers
+
+---
+
+*Interested in this feature in the official app? Vote on the [Feature Request Discussion](https://github.com/orgs/home-assistant/discussions/2403).*
+
+---
 
 ## Getting Started
 
